@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: skyblue;
+        }
+        nav{
+            height: 90px;
+            width: 100%;
+            background-color: lightgreen;
+        }
+        nav ul{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin-top: 35px;
+        }
+        #contact{
+            transition: all 300ms;
+        }
+        #contact-list{
+            display: none;
+        }
+        #contact-list li{
+            display: block;
+            transition: all 300ms;
+        }
+        #contact:hover #contact-list{
+            position: absolute;
+            display: block;
+        }
+        #contact-list li:hover{
+            color: blue;
+            scale: 1.2;
+        }
+        #wa-ways{
+            display: none;
+        }
+        #wa-ways li{
+            display: block;
+            color: black;
+        }
+        #wa:hover #wa-ways{
+            display: block;
+            position: absolute;
+            background-color: lightblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li id="contact">Contact
+                    <ul id="contact-list">
+                        <li>Gmail</li>
+                        <li>Linkdin</li>
+                        <li id="wa">Whatsapp
+                            <ul id="wa-ways">
+                                <li>QR Code</li>
+                                <li>Mobile Number</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>About me</li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
