@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color: lightblue;
+        }
+        nav{
+            height: 90px;
+            width: 100%;
+            background-color: lightyellow;
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 35px;
+        }
+        nav ul li{
+            cursor: pointer;
+            list-style: none;
+            font-weight: bold;
+            transition: all 300ms;
+        }
+        li:hover{
+            color: blue;
+        }
+        
+        button{
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            transition: all 300ms;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li id="home"><a href="#">Home</a></li>
+                <li id="contact"><a href="#">Contact us</a></li>
+                <li id="about"><a href="#">About us</a></li>
+                <li id="login"><a href="#">Login/Register</a></li>
+            </ul>
+        </nav>
+
+
+        <button id="btn">Hello</button>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("mouseenter", function(change){
+            change.target.style.backgroundColor = 'green';
+        })
+        document.getElementById("btn").addEventListener("mouseleave", function(change){
+            change.target.style.backgroundColor = "transparent";
+        })
+        document.getElementById("btn").addEventListener("click", function(textChange){
+            textChange.target.innerHTML = "Hello Ji";
+            textChange.target.style.backgroundColor = 'salmon';
+        })
+        //Nav list
+        document.getElementById("home").addEventListener("click", function(home){
+            home.target.style.backgroundColor = 'pink';
+        })
+        // document.getElementById("home").addEventListener("mouseenter", function(home){
+        //     home.target.style.backgroundColor = 'lightgreen';
+        // })
+        // document.getElementById("home").addEventListener("mouseleave", function(home){
+        //     home.target.style.backgroundColor = 'transparent';
+        // })
+        document.getElementById("contact").addEventListener("click", function(homeChange){
+            homeChange.getElementById("home").target.style.backgroundColor = 'transparent';
+        })
+    </script>
+</body>
+</html>
