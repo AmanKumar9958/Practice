@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 300px;
+            width: 200px;
+            background-color: lightgreen;
+            margin: auto;
+        }
+        button{
+            margin-left: 30px;
+            margin-top: 60px;
+            border: 2px solid black;
+            padding: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="change()" id="btn">Change Background</button>
+    </div>
+    <script>
+        const btn = document.getElementById("btn");
+            btn.addEventListener('click', function(change){
+            document.body.style.backgroundColor = "Yellow";
+        })
+        
+    </script>
+</body>
+</html>
